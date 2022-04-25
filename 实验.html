@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <scrip src="js/zi.js"></scrip>
+    <script type="text/html" id="tcp">
+        <div>姓名：{{name}}</div>
+        <div>年龄：{{age}}</div>
+        <div>性别：{{gender}}</div>
+        <div>住址：{{address}}</div>
+    </script>
+
+    <script>
+        var date = {
+            name: 'YTS',
+            age: 19,
+            gender: '男',
+            address: '千里广大'
+                // ...
+        }
+
+
+        var htmlStr = template('tcp', date)
+        document.getElementById('user_box').innerHTML = htmlStr
+    </script>
+    <div id="user_box"></div>
+    <div>-------</div>
+    <input type="file">
+
+</body>
+
+</html>

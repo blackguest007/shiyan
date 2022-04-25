@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二个项目实战——品优购</title>
+    <!-- 用 link 引入 css 文件-->
+    <link rel="stylesheet" href="css/base.css">
+    <!--用 link 引入 css 公共部分属性-->
+    <!---->
+    <link rel="stylesheet" href="css/common.css">
+    <!--引入 ico 图标-->
+    <script src="js/jQuery.js"></script>
+    <!-- 一定要优先引入 jQuery  -->
+    <link rel="shortcut ico" href="favicon.ico">
+    <script src="js/lunbotu.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/animate_top.js"></script>
+    <script src="js/myself.js"></script>
+    <!-- 注意 JS 使用 script 去调用，而 CSS 是用 link -->
+
+    <link rel="stylesheet" href="css/myself.css">
+    <style>
+        /* 这是模仿淘宝侧边栏写返回顶部的按钮 */
+        
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            display: block;
+            background-color: pink;
+            border-radius: 15px;
+            display: none;
+            color: rgb(207, 9, 9);
+        }
+        
+        span.goBack {
+            display: block;
+            position: absolute;
+            bottom: 2px;
+            font-weight: 520;
+        }
+        /* 这是模仿淘宝侧边栏写返回顶部的按钮*/
+        /* .angel {
+            position: fixed;
+            top: 2px;
+            float: left;
+        }
+        /* 提高层级 */
+        /* 这是鼠标天使特效 */
+        
+        .cloud {
+            position: absolute;
+            left: 150;
+            top: 150;
+            width: 83px;
+            z-index: -1;
+            /* 减少层级让该背景图放在下面，防止它遮盖文字 */
+            height: 42px;
+            background: url(images/cloud.gif) no-repeat;
+        }
+        /* 上面这个是筋斗云特效 */
+        
+        body {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 个人主页跳转页面设计 -->
+    <div class="myself">
+        <div class="img1"><img src="个人主页/images/myself.png" alt=""></div>
+        <div class="img2"><img src="个人主页/images/love.png" alt="">
+        </div>
+        <div class="lianjie">
+            <a href="个人主页/index.html">点击即可进入个人主页</a>
+
+        </div>
+    </div>
+
+
+
+    <!-- <div class="angel"> <img src="images/angel.gif" alt=""> </div> -->
+    <div class="slider-bar">
+        欢迎光临
+        <span class="goBack">返回顶部</span>
+    </div>
+    <script src="js/flexible.js"></script>
+    <section class="shortcut">
+        <div class="w">
+            <div class="lf">
+                <ul>
+                    <li>品优购欢迎你!&nbsp;&nbsp;&nbsp; </li>
+                    <li>请登录&nbsp;&nbsp; <a href="#" class="style_red">&nbsp; 免费注册</a></li>
+                </ul>
+
+            </div>
+            <div class="rf">
+                <ul>
+                    <li><a href="">我的订单</a></li>
+                    <li></li>
+                    <li class="arrow-icon"><a href="">我的品优购</a></li>
+                    <li></li>
+                    <li><a href="">品优购会员</a></li>
+                    <li></li>
+                    <li><a href="">企业采购</a></li>
+                    <li></li>
+                    <li class="arrow-icon"><a href="">关注品优购</a></li>
+                    <li></li>
+                    <li class="arrow-icon"><a href="">客户服务</a></li>
+                    <li></li>
+                    <li class="arrow-icon"><a href="">网站导航</a></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--上面是导航栏，下面开始设计网页的头部部分-->
+    <header class="header w">
+        <div class="logo">
+            <h1>
+                <a href="index.html">点击返回首页</a>
+            </h1>
+        </div>
+        <div class="search">
+            <input type="text" value="" placeholder="搜索框">
+            <button>搜索</button>
+        </div>
+        <div class="hotwords">
+            <a href="" class="style_red">优惠购首发</a>
+            <a href="">亿元优惠</a>
+            <a href="">9.9团购</a>
+            <a href="">每满99减30</a>
+            <a href="">办公用品</a>
+            <a href="">电脑</a>
+            <a href="">通信</a>
+        </div>
+        <div class="shopcar">
+            <i class="count">8</i>
+        </div>
+    </header>
+    <!--下面开始设计导航模块-->
+    <div class="nav">
+        <div class="w">
+            <div class="dropdown">
+                <div class="dt">全部商品分类</div>
+                <div class="dd">
+                    <ul>
+                        <li>
+                            <a href="#">家用电器</a>
+                        </li>
+                        <li>
+                            <a href="#">手机</a>
+                            <a href="#">数码</a>
+                            <a href="#">通信</a>
+                        </li>
+                        <li>
+                            <a href="#">电脑、办公</a>
+                        </li>
+                        <li>
+                            <a href="#">家居、家具、家装、厨具</a>
+                        </li>
+                        <li>
+                            <a href="#">男装、女装、童装、内衣</a>
+                        </li>
+                        <li>
+                            <a href="#">个户化妆、清洁用品、宠物</a>
+                        </li>
+                        <li>
+                            <a href="#">鞋靴、箱包、珠宝、奢侈品</a>
+                        </li>
+                        <li>
+                            <a href="#">运动户外、钟表</a>
+                        </li>
+                        <li>
+                            <a href="#">汽车、汽车用品</a>
+                        </li>
+                        <li>
+                            <a href="#">母婴、玩具乐器</a>
+                        </li>
+                        <li>
+                            <a href="#">食品、酒类、生鲜、特产</a>
+                        </li>
+                        <li>
+                            <a href="#">医药保健</a>
+                        </li>
+                        <li>
+                            <a href="#">图书、音像、电子书</a>
+                        </li>
+                        <li>
+                            <a href="#">彩票、旅行、充值、票务</a>
+                        </li>
+                        <li>
+                            <a href="#">理财、众筹、白条、保险</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="navitems ">
+                <div class="cloud">
+
+                </div>
+                <ul class="cloud1">
+                    <li>
+                        <a href="#">服装城</a>
+                    </li>
+                    <li>
+                        <a href="#">美妆馆</a>
+                    </li>
+                    <li>
+                        <a href="#">传智超市</a>
+                    </li>
+                    <li>
+                        <a href="#">全球购</a>
+                    </li>
+                    <li>
+                        <a href="#">闪购</a>
+                    </li>
+                    <li>
+                        <a href="#">优购</a>
+                    </li>
+                    <li>
+                        <a href="#">拍卖</a>
+                    </li>
+                    <li class="e900">
+                        <a href="#">趣物</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--首页开始的 start 部分-->
+    <div class="main">
+        <div class="w">
+            <div class="main">
+                <div class="focus">
+                    <div class="lunbo_l"> <a href="javescript:;" class='arrow-icon '>左</a></div>
+                    <div class="lunbo_r"> <a href="javescript:;" class='arrow-icon '>右</a> </div>
+                    <!-- 由于上面的两个按钮有浮动，下面的 ul 要清除浮动才行 -->
+                    <!-- 由于上面的两条链接中的 a 在点击的时候都会默认返回到顶部， -->
+                    <!-- 因此你需要在 href 当中天剑这个 javescript:; 来解决这个问题 -->
+                    <ul>
+                        <li>
+                            <a href="#"> <img src="images/京东1.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="images/京东2.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="images/京东3.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"> <img src="images/京东4.png" alt=""></a>
+                        </li>
+                    </ul>
+                    <ol class="circle">
+
+                    </ol>
+                </div>
+                <div class="newflash">
+                    <div class="news">
+                        <div class="new_head">
+                            <h5>品优购快报</h5>
+                            <a href="" class="more">更多</a>
+                        </div>
+                        <div class="news_body">
+                            <ul>
+
+                                <li>
+                                    <strong>特惠</strong>
+                                    <a href="">备战开学季 全民半价购物码</a>
+                                </li>
+                                <li>
+                                    <strong>公告</strong>
+                                    <a href="">品优稳占家电网购六成份额</a>
+                                </li>
+                                <li>
+                                    <strong>特惠</strong>
+                                    <a href="">百元中秋全品类礼卷限量领</a>
+                                </li>
+                                <li>
+                                    <strong>公告</strong>
+                                    <a href="">上品优生鲜 橙湖大闸蟹</a>
+                                </li>
+                                <li>
+                                    <strong>特惠</strong>
+                                    <a href="">每日享折扣品优 品质游</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lifeserve">
+                        <ul>
+                            <li>
+                                <i class="a1">1</i>
+                                <p>话费</p>
+                            </li>
+                            <li> <i class="a2"> </i>
+                                <p>机票</p>
+                            </li>
+                            <li> <i class="a3"></i>
+                                <p>电影票</p>
+                            </li>
+                            <li> <i class="a4"></i>
+                                <p>游戏</p>
+                            </li>
+                            <li> <i class="a5"></i>
+                                <p>彩票</p>
+                            </li>
+                            <li> <i class="a6"></i>
+                                <p>加油卡</p>
+                            </li>
+                            <li> <i class="a7"></i>
+                                <p>酒店</p>
+                            </li>
+                            <li> <i class="a8"></i>
+                                <p>火车票</p>
+                            </li>
+                            <li> <i class="a9"></i>
+                                <p>众筹</p>
+                            </li>
+                            <li> <i class="a10"></i>
+                                <p>理财</p>
+                            </li>
+                            <li> <i class="a11"></i>
+                                <p>礼品卡</p>
+                            </li>
+                            <li> <i class="a12"></i>
+                                <p>白条</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bargain"><img src="upload/bargain.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--上面是首页结束部分-->
+    <!--下面开始设计电脑今日推荐部分-->
+    <div class="renmend">
+        <div class="w">
+            <div class="renmend_left">
+                <img src="images/recom.png" alt="">
+                <div class="renmend_left1">
+                    <img src="images/华硕5.png" alt=""></div>
+            </div>
+            <div>
+                <div class="renmend_right">
+                    <ul>
+                        <li><img src="images/华硕1.png" alt=""></li>
+                        <li><img src="images/华硕2.png" alt=""></li>
+                        <li><img src="images/华硕3.png" alt=""></li>
+                        <li><img src="images/华硕4.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--今日推荐电脑部分结束-->
+        <!--下面开始设计楼层区-->
+        <div class="floor">
+            <div class="firstfloor">
+                <div class="w">
+                    <div class="head">
+                        <h3 class="banner1">2021-2022笔记本电脑推荐:女生</h3>
+                        <ul>
+                            <li>惠普星15 Air :5299</li>
+                            <li>荣耀MaigicBook 15 AMD:4999</li>
+                            <li>联想小新 Pro16：5599</li>
+                            <li>华为matebook13s ：5299 </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <ul>
+                            <li><img src="images/惠普星14 Air.png" alt=""></li>
+                            <li><img src="images/荣耀MaigicBook 15 AMD.png" alt=""></li>
+                            <li><img src="images/4f5b63384889f01a.jpg" alt=""></li>
+                            <li><img src="images/华为matebook13.png" alt=""></li>
+                            <li><img src="images/不负时光.png" alt=""></li>
+                        </ul>
+                        <ul class="video">
+                            <h4>华为matebook13s ：5299 </h4>
+                            <li><video src="视频/华为.mp4" controls="controls"></video></li>
+                            <h4>联想小新 Pro16：5599</h4>
+                            <li><video src="视频/联想小新.mp4" controls="controls"></video></li>
+                            <h4>荣耀MaigicBook 15 AMD:4999</h4>
+                            <li><video src="视频/【荣耀BohrBR-WAH9F】荣耀笔记本 MagicBook X 15 2021 15.6英寸全面屏轻薄笔记本电脑 （i5 8GB 512GB多屏协同）冰河银【行情 报价 价格 评测】-京东.mp4" controls="controls"></video></li>
+                            <h4>惠普星15 Air :5299</h4>
+                            <li><video src="视频/惠普星14 PRo.mp4" controls="controls"></video></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--下面开始设计末尾盒子-->
+        <footer>
+            <div class="w ">
+                <div class="mod_service ">
+                    <ul>
+                        <li>
+                            <h5 class="a1 "></h5>
+                            <div>
+                                <h4>正品保障</h4>
+                                <p>正品保障,提供发票</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="a2 "></h5>
+                            <div>
+                                <h4>极速物流</h4>
+                                <p>极速物流,极速送达</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="a3 "></h5>
+                            <div>
+                                <h4>无忧售后</h4>
+                                <p>7天无条件退款</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h5 class="a4 "></h5>
+                            <div>
+                                <h4>特色服务</h4>
+                                <p>私人订制家电</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mod_help ">
+                    <dl>
+                        <dt>
+                        <dd>><a href=" ">购物流程</a></dd>
+                        <dd><a href=" ">会员介绍</a></dd>
+                        <dd><a href=" ">生活介绍、团购</a></dd>
+                        <dd><a href=" ">常见问题</a></dd>
+                        <dd><a href=" ">订制家电</a></dd>
+                        <dd><a href=" ">联系客户</a></dd>
+                    </dt>
+
+                    </dl>
+                    <dl>
+                        <dt>
+                        <h5><a href=" ">配送方式</a></h5>
+                        <dd><a href=" ">上门自提</a></dd>
+                        <dd><a href=" ">211限时达</a></dd>
+                        <dd><a href=" ">配送服务查询</a></dd>
+                        <dd><a href=" ">配送费用收取标准</a></dd>
+                        <dd><a href=" ">海外配送</a></dd>
+                    </dt>
+
+                    </dl>
+                    <dl>
+                        <dt>
+                        <h5><a href=" ">支付方式</a></h5>
+                        <dd><a href=" ">货到付款</a></dd>
+                        <dd><a href=" ">在线支付</a></dd>
+                        <dd><a href=" ">分期付款</a></dd>
+                        <dd><a href=" ">邮局汇款</a></dd>
+                        <dd><a href=" ">公司转账</a></dd>
+                    </dt>
+
+                    </dl>
+                    <dl>
+                        <dt>
+                        <h5><a href=" ">售后服务</a></h5>
+                        <dd><a href=" ">售后政策</a></dd>
+                        <dd><a href=" ">价格保护</a></dd>
+                        <dd><a href=" ">退款说明</a></dd>
+                        <dd><a href=" ">返修/退还货</a></dd>
+                        <dd><a href=" ">取消订单</a></dd>
+                    </dt>
+
+                    </dl>
+                    <dl>
+                        <dt>
+                        <h5><a href=" ">特色服务</a></h5>
+                        <dd><a href=" ">夺宝岛</a></dd>
+                        <dd><a href=" ">延保服务</a></dd>
+                        <dd><a href=" ">品优购服务</a></dd>
+                        <dd><a href=" ">品优购E卡</a></dd>
+                        <dd><a href=" ">品优购通信</a></dd>
+                    </dt>
+
+                    </dl>
+                    <dl>
+                        <dd>魔法少女</dd>
+                        <img src="images/桌面.png " alt=" ">
+
+                    </dl>
+                </div>
+                <div class="mod_copyright ">
+                    <div class="links ">
+                        <a href="# ">关于我们</a> | <a href="# ">联系我们</a> | 联系客服 | 商家入驻 | 营销中心 | 手机品优购 | 友情链接 | 销售联盟 | 品优购社区 | 品优购公益 | English Site | Contact U
+                    </div>
+                    <div class="copyright "> 地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn <br> 京ICP备08001421号京公网安备110108007702
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!--下面开始设计网页中最后的版权部分-->
+        <!-- 引入懒加载插件必须需在所有图片之后引入才行 -->
+        <script src="js/EasyLazyload.js"></script>
+        <script>
+            lazyLoadInit({
+                // coverColor: "white",
+                // coverDiv: "<h1>test</h1>",
+                // offsetBottom: 0,
+                // offsetTopm: 0,
+                showTime: 1100,
+                onLoadBackEnd: function(i, e) {
+                    console.log("onLoadBackEnd:" + i);
+                },
+                onLoadBackStart: function(i, e) {
+                    console.log("onLoadBackStart:" + i);
+                }
+            });
+        </script>
+</body>
+
+</html>
