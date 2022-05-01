@@ -1,0 +1,598 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/* 导航栏 */
+#menu{
+    width: 100%;
+    height: 60px;
+    line-height: 58px;
+    position: fixed;
+    z-index: 99;
+    background-color: rgb(52, 52, 53);
+}
+#menu li {
+    text-align: center;
+    width: 90px;
+    float: left;
+    margin-right: 3%;
+  
+}
+.listyle {
+    border-bottom:2px solid rgb(66,184,241);
+    background-color: rgba(0,0,0,.1);
+}
+#menu li:nth-child(1){
+    margin-left: 40%;
+}
+#menu li a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+}
+/* logo */
+.logo h1{
+    position: fixed;
+    z-index: 999;
+    top: 5px;
+    left: 5%;
+    
+}
+.logo h1 a{
+    color: #fff;
+    font-size: 25px;
+}
+/* 第一屏样式 */
+.tx img {
+    display: block;
+    margin: auto;
+    margin-top: 150px;
+    width: 150px; 
+    border-radius: 50%;
+    border: 3px solid  #fff;
+    transition: .5s;
+}
+.tx img:hover{
+    transform: rotateZ(360deg);
+}
+
+.name {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 100;
+}
+.name p {
+    padding-top: 3px;
+    font-size: 13px;
+    color: rgb(105, 105, 105);
+}
+.amo {
+    margin-top: 20px;
+}
+.amo li {
+    margin: auto;
+    margin-bottom: 9px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(66,184,241);
+    border-radius: 50%;
+}
+.work {
+    margin: 15px auto;
+    width: 120px;
+    height: 35px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-size: 18px;
+    line-height: 35px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+.experience{
+    position: relative;
+}
+.experience .line {
+    position: relative;
+    margin: 40px auto;
+    height: 250px;
+    width: 1px;
+    background-color: rgba(255,255,255,.3);
+}
+.line::before {
+    position: absolute;
+    right: -5px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.line::after {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.line span {
+    top: 50px;
+    right: -2px;
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 1px;
+    background-color: #fff;
+}
+.line span:nth-child(2) {
+    top: 110px;
+}
+.line span:nth-child(3) {
+    top: 180px;
+}
+.experience1,
+.experience2,
+.experience3 {
+    position: absolute;
+    top: 40px;
+    left: 51%;
+    color: rgb(105, 105, 105);
+    font-size: 14px;
+}
+.experience2 {
+    top: 100px;
+}
+.experience3 {
+    top: 170px;
+}
+.experiences1,
+.experiences2,
+.experiences3 {
+    position: absolute;
+    top: 35px;
+    right: 52%;
+    color: rgb(105, 105, 105);
+    font-size: 14px;
+    width: 180px;
+    height: 30px;
+    background-color: #181a1c;
+    line-height: 30px;
+    text-align: center;
+}
+.experiences1::before,
+.experiences2::before,
+.experiences3::before {
+    content: "";
+    position: absolute;
+    right: -16px;
+    top: 8px;
+    width: 0;
+    height: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #181a1c;;
+}
+.experiences2 {
+    top: 95px;
+}
+.experiences3 {
+    top: 165px;
+}
+/* 第二屏 */
+.skills {
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    width: 172px;
+    height: 42px;
+}
+.skillsall  {
+    margin: auto;
+    margin-top: 120px;
+    width: 830px;
+    height: 240px;
+}
+.skillsall li {
+    width: 170px;
+    height: 240px;
+    float: left;
+    margin-left: 50px;
+}
+.skillsall li:nth-child(1) {
+    margin-left: 0px;
+}
+.skillsall li img {
+    width: 100%;
+    z-index: 999;
+    height: 100%;
+}
+.section2 p {
+    margin-top: 100px;
+    font-size: 16px;
+    text-align: center;
+    text-indent: 2em;
+    line-height: 30px;
+    color: rgb(65, 64, 64);
+}
+/* 第三屏 */
+.case {
+    margin: auto;
+    margin-top: 180px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 35px;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    font-size: 18px;
+    line-height: 35px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+.works {
+    width: 1000px;
+    margin: auto;
+}
+.works li {
+    float: left;
+    margin-left: 40px;
+    margin-top: 50px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.works li img {
+    width: 100%;
+    height: 100%;
+}
+.works li .box {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(66,183,240);
+
+}
+.works li .box p {
+    text-align: center;
+}
+/* 第四屏 */
+.section4 p , .section4 a {
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    width: 500px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 25px;
+    background-color: rgb(41,187,227);
+    color: #fff;
+}
+.section4 p:nth-child(1) {
+    margin-top: 250px;
+}
+
+/* 动画 */
+.amo li:nth-child(1){
+    animation: amo 0.4s linear 0s infinite alternate;
+}
+.amo li:nth-child(2){
+    animation: amo 0.4s linear 0.2s infinite alternate;
+}
+.amo li:nth-child(3){
+    animation: amo 0.4s linear 0.4s infinite alternate;
+}
+@keyframes amo {
+    0% {
+        transform:scale(1)
+    }
+    50% {
+        transform:scale(1)
+    }
+    100% {
+        transform:scale(1.5)
+    }
+}
+/* 第一屏动画 */
+.amo1 {
+    opacity: 0;
+    animation: amo1 .5s 0.3s ease-out;
+    animation-fill-mode: forwards;
+}
+.amn {
+    animation: tx 1.5s ease-out;
+    transform: translateY(-180px);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.names {
+    transform: translateY(-90px);
+    animation: name 1s 0.2s ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.workamn {
+    transform: translateY(100px);
+    animation: work .5s 0.2s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.lineamn {
+    transform: translateY(300px);
+    animation: work .5s 0.4s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.experienceamn {
+    transform: translateY(500px);
+    animation: experience 1s  ease-in;
+    animation-fill-mode: forwards;
+
+}
+@keyframes tx {
+    0% {
+        transform: translateY(-180px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes name {
+    0% {
+        transform: translateY(-90px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes amo1 {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes work {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes line {
+    0% {
+        transform: translateY(300px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes experience {
+    0% {
+        transform: translateY(500px);
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/* 第二屏动画 */
+.skillsallamn {
+    transform: translateY(-300px);
+    animation: skillsallamn .5s 0.2s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.skillsman {
+    transform: translateY(-300px);
+    animation: skillsamn .6s  ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.pamn {
+    transform: translateY(100px);
+    animation: pamn .6s 0.5s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes skillsallamn {
+        0% {
+            transform: translateY(-300px);
+        }
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+}
+@keyframes skillsamn {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes pamn {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* 第三屏动画 */
+.caseamn {
+    transform: translateY(-100px);
+    animation: case .6s 0.5s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+.worksamn {
+    transform: translateY(300px);
+    animation: works .6s 0.5s ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes case {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes works {
+    0% {
+        transform: translateY(300px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.section4amn {
+    animation: section4 .6s 0.5s ease-in;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes section4 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 响应式 */
+@media screen and (max-width:970px) {
+    .works {
+        width: 500px;
+    }
+    .case {
+        margin-top: 100px;
+    }
+    .section4 p , .section4 a {
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width:838px) {
+    .skillsall {
+        margin-top: 0px;
+        width: 440px;
+    }
+    .skillsall li {
+        margin-bottom: 20px;
+    }
+    .skillsall li:nth-child(3) {
+        margin-left: 0px;
+    }
+    .skills {
+        margin-top: 10px;
+    }
+    .section2 p {
+        margin-top: 280px;
+    }
+    .experiences1,
+    .experiences2,
+    .experiences3 {
+        right: 52%;
+    }
+    #menu,
+    .logo {
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .tx img{
+        width: 100px;
+        margin-top: 2%;
+    }
+    .name{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .section {
+        padding-top: 10px!important;
+    }
+    .experiences {
+        font-size: 10px;
+    }
+    .experiences1,
+    .experiences2,
+    .experiences3 {
+        width: 150px;
+        right: 55%;
+    }
+    .skillsall {
+        width: 260px;
+
+    }
+    .skillsall li {
+        width: 100px;
+        height: 170px;
+    }
+    .skills {
+        width: 100px;
+    }
+    .skills img{
+        width: 100%;
+        height: 30px;
+    }
+    .section2 .amo {
+        margin-top: -25px;
+    }
+    .section2 p {
+        margin-top: 140px;
+        font-size: 12px;
+    }
+    .case {
+        margin-top: 10px;
+    }
+    .works li {
+        width: 130px;
+        height: 170px;
+    }
+    .section4 p  ,.section4 a{
+        transform: scale(0.4);
+        margin-left: -62px;
+        margin-bottom: -70px;
+    }
+    .section4 p:nth-child(1) {
+        margin-top: 50%;
+        
+    }
+    .experience1,
+    .experience2,
+    .experience3 {
+        margin-top: 2px;
+        left: 52%;
+    }
+}

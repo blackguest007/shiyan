@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        div ul li a:hover {
+            color: pink;
+        }
+        
+        div.a1 {
+            width: 1220px;
+            height: 102px;
+            margin: 0px auto 0px auto;
+        }
+        
+        div.logo2 {
+            width: 195px;
+            height: 42px;
+            float: left;
+            margin-top: 30px;
+            padding-left: 2px;
+        }
+        
+        div.nav ul li.l {
+            padding-left: 30px;
+        }
+        
+        div.nav {
+            float: left;
+            margin: 25px auto;
+            margin-left: 50px;
+        }
+        
+        div.nav ul li {
+            float: left;
+            padding-left: 55px;
+            margin-top: 5px;
+        }
+        
+        div.nav ul li a {
+            height: 42px;
+            line-height: 42px;
+            display: block;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /*以上是第一行第一个以及第二个的盒子的CSS*/
+        
+        div.a2 {
+            width: 414px;
+            /*由于两个行内块元素之间进行链接的话，会默认存在缝隙的，因此在这里将宽度进行了加宽*/
+            height: 30px;
+            float: left;
+            margin-top: 30px;
+            margin-left: 73px;
+        }
+        
+        div.a2 input {
+            width: 362px;
+            height: 38px;
+            border: 2px solid skyblue;
+            /*注意边框会让盒子撑开，因此设计大小的时候要注意*/
+            border-right: none;
+            font-size: 14px;
+            color: rgb(140, 141, 140);
+            float: left;
+        }
+        /*原本盒子宽度是362px的，但是由于下面的padding-left 有15px的大小，因此会让该盒子给撑大的，所以必需在原来362的基础下减掉15px*/
+        
+        div.a2 button {
+            width: 50px;
+            height: 42px;
+            border: 0px;
+            float: left;
+            background: url(image/btn.png);
+        }
+        /*由于按钮都是默认存在边框的，因此你需要手动去设置*/
+        
+        div.a3 {
+            width: 108px;
+            height: 46px;
+            float: left;
+            margin-left: 50px;
+            font-size: 14px;
+            color: rgba(29, 28, 28, 0.582);
+        }
+        
+        div.a3 img {
+            margin-top: 30px;
+            color: rgb(40, 43, 41);
+            vertical-align: bottom;
+        }
+        /*这是第一行盒子,下面banner盒子*/
+        
+        div.b1 {
+            background-color: #1c036c;
+            margin: 0px auto;
+            height: 420px;
+        }
+        
+        div.banner {
+            width: 1200px;
+            height: 420px;
+            background: url(images/1.png) no-repeat top center;
+            margin: 0px 160px;
+        }
+        /*上面已经完成了banner的行部分，下面开始做banner的列部分*/
+        
+        div.subnav {
+            height: 412.5px;
+            width: 190px;
+            background: rgba(0, 0, 0, 0.3);
+            padding-top: 7.5px;
+            float: left;
+        }
+        
+        div.subnav ul li {
+            height: 45px;
+            padding: 0px 20px;
+            line-height: 45px;
+        }
+        
+        div.subnav ul li a:hover {
+            color: skyblue;
+        }
+        
+        div.subnav ul li a {
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            width: 56px;
+            height: 19.2px;
+        }
+        
+        div.subnav ul li a span {
+            float: right;
+        }
+        /*下面开始创建课程表*/
+        
+        div.course {
+            width: 228px;
+            height: 300px;
+            background-color: #fff;
+            float: right;
+            /*这里强调一次，合并的盒子不会出现外边距合并的情况，因此下面的那行代码将不会撑大外边的盒子，这是一种特殊情况，务必记住*/
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+        
+        div.course h2 {
+            line-height: 48px;
+            height: 48px;
+            font-weight: 450px;
+            font-family: 微软雅黑;
+            font-size: 18px;
+            background-color: #9bceea;
+            text-align: center;
+            color: #FFFFFF;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        
+        div.类 a {
+            color: #00a4ff;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        
+        div.类 ul {
+            width: 22.8px;
+            height: 200.4px;
+            font-size: 16px;
+        }
+        
+        div.类 ul li {
+            width: 198px;
+            height: 65.8px;
+            border-bottom: 1px solid #ccc;
+            padding-left: 30px;
+            line-height: 65.8px;
+        }
+        /*这里pad会撑开盒子30px,因此将原本228px大小的盒子减了30px的大小*
+            并且边框也要减去1px,因为你只设置了下边框，如果是上下都有边框的话，你就需要考虑两个因素了*/
+        /*/
+        /*/
+        /*下面开始设计第二行右边盒子的最下面的盒子——全部课程模块*/
+        
+        div.more {
+            width: 200px;
+            height: 40px;
+        }
+        
+        div.more1 {
+            width: 198px;
+            height: 38px;
+            border: 1px solid #00a4ff;
+            margin: 5px auto;
+            margin-left: 15px;
+            line-height: 38px;
+            text-align: center;
+            font-weight: 400;
+            /*使文字水平居中用text-align;使文字垂直居中用line-height*/
+            /*注意！ 如果你要使文字加粗的话，font-weight后面是不需要加px单位的，只需要加数字就行了。其中400是默认属性值*/
+        }
+        
+        div.more1 a {
+            font-size: 18px;
+        }
+        /*design interesting box*/
+        
+        div.interesting {
+            width: 1200px;
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+            margin-top: 8px;
+            line-height: 60px;
+        }
+        
+        div.interesting h2 {
+            width: 132px;
+            height: 60px;
+            float: left;
+            margin-left: 30px;
+            /*浮动的盒子不会撑大盒子，不需要进行盒子尺寸的加减计算*/
+        }
+        
+        div.interesting h2 a {
+            width: 75px;
+            height: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #00a4ff;
+        }
+        
+        div.interesting ul {
+            float: left;
+        }
+        
+        div.interesting ul li {
+            float: left;
+        }
+        
+        div.interesting ul li a {
+            text-decoration: none;
+            padding: 0px 34px;
+            border-left: 1px solid #ccc;
+            color: black;
+        }
+        
+        a.b1 {
+            float: right;
+            font-size: 14px;
+            text-decoration: none;
+            color: #00a4ff;
+            margin-right: 34px;
+        }
+        
+        div ul.h li :hover {
+            color: #00a4ff;
+        }
+        /*下面开始布局第三行盒子,也就是多个小盒子的部分*/
+        /*这里我们布局方式为首先设置一个大的盒子，然后再分为上下两个盒子，上面为head of box ,下面为多个小盒子储存的大盒子*/
+        
+        div.c {
+            width: 1245px;
+            margin: 0 auto;
+        }
+        
+        div.hd {
+            height: 42px;
+            margin-top: 37px;
+        }
+        
+        div.hd h3 {
+            width: 80px;
+            height: 30px;
+            font-weight: 400;
+            font-size: 20px;
+            margin-left: 1.5em;
+            float: left;
+            line-height: 42px;
+        }
+        
+        div.hd a {
+            float: right;
+            line-height: 42px;
+            font-weight: 400;
+            text-decoration: none;
+            margin-right: 40px;
+            font-size: 12px;
+        }
+        
+        div.hd ul li {
+            width: 228px;
+            height: 270px;
+        }
+        
+        ul.h {
+            width: 1245px;
+            margin-left: 20px;
+        }
+        
+        ul.h li {
+            width: 228px;
+            height: 270px;
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        ul.h li>em {
+            position: absolute;
+            /*这里的>也是只修改其亲儿子的em,因为父亲的盒子里面有两个em*/
+            top: 5px;
+            right: 0px;
+        }
+        /*划重点，由于图片的大小可能存在差异，因此你需要将图片的大小强制转化为li的宽度*/
+        
+        ul.h li>img {
+            width: 100%/*这里使用>标签是只修改ul.h的亲儿子的标签，是将hot的标签*/
+        }
+        /*划重点，由于图片的大小可能存在差异，因此你需要将图片的大小强制转化为li的宽度*/
+        
+        div.c ul.h li h3 {
+            margin: 24px 20px 20px 24px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        div.c ul li div.into {
+            width: 180px;
+            height: 27px;
+            color: #999;
+            margin: 0 20px 0 25px;
+            font-size: 14px;
+            line-height: 27px;
+        }
+        
+        div.c ul li div.into em {
+            color: #ff7c2d;
+        }
+        
+        div.c ul li div.c5 {
+            width: 180px;
+            height: 27px;
+            color: #999;
+            margin: 0 20px 0 25px;
+            font-size: 14px;
+            line-height: 27px;
+            margin-top: 40px;
+        }
+        
+        div.c ul li div.c5 em {
+            color: #ff7c2d;
+        }
+        /*下面将开始设计一个尾部box*/
+        
+        div.d {
+            width: 1200px;
+            clear: both;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            background-color: #f3f5f7;
+        }
+        
+        div.d div.hd {
+            height: 42px;
+            clear: both;
+            padding-top: 30px;
+            color: #050505;
+            background-color: #f3f5f7;
+        }
+        
+        div.d div.d1 {
+            height: 42px;
+            margin-bottom: 17.5px;
+        }
+        
+        div.d div.d1 h3 {
+            line-height: 42px;
+            font-size: 20px;
+            font-weight: 400;
+            float: left;
+        }
+        
+        div.d div.d1 a:hover {
+            color: #00a4ff;
+        }
+        
+        div.d div.d1 a.more :hover {
+            color: #00a4ff;
+        }
+        
+        div.d div.d1 a {
+            text-decoration: none;
+            width: 52px;
+            height: 42px;
+            font-size: 16px;
+            line-height: 42px;
+            float: left;
+            margin-left: 50px;
+        }
+        
+        div.d div.d1 a.d2 {
+            margin-left: 350px;
+        }
+        
+        div.d div.d1 a.more {
+            float: right;
+            font-size: 12px;
+            background-color: #f3f5f7;
+            margin-right: 20px;
+        }
+        
+        .d .d2 {
+            width: 1200px;
+        }
+        /*下面开始设计左右两边的盒子*/
+        
+        .d .d2 .zuo {
+            width: 228px;
+            float: left;
+            height: 392px;
+        }
+        
+        .d .d2 .zuo img {
+            width: 100%;
+            height: 100%;
+        }
+        /*修改图片的比例*/
+        
+        .d .d2 .you {
+            width: 972px;
+            height: 393px;
+            float: right;
+        }
+        
+        div.you div.shang {
+            width: 972px;
+            height: 100px;
+            margin-left: 15px;
+            float: left;
+        }
+        
+        div.hou ul {
+            width: 973px;
+            height: 270px;
+            float: right;
+            margin-top: 20px;
+        }
+        
+        div.hou ul li {
+            float: left;
+            margin-left: 15px;
+        }
+        
+        div.hou ul li {
+            width: 228px;
+            height: 270px;
+            float: left;
+        }
+        
+        .hou ul li h3 {
+            width: 184px;
+            height: 32px;
+            margin: 24px 20px 20px 24px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        
+        div.zhong {
+            width: 180px;
+            height: 27px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        div.zhong em {
+            color: tomato;
+            font-size: 12px;
+            margin-left: 20px;
+        }
+        /*next you will design last box*/
+        
+        div.finall {
+            width: 1200px;
+            height: 372px;
+            clear: both;
+            margin-top: 435px;
+        }
+        
+        div.finall div.zuo {
+            width: 432px;
+            height: 378px;
+            float: left;
+            margin-left: 20px;
+        }
+        
+        div.finall div.zuo p {
+            width: 432px;
+            height: 36px;
+            margin: 15px 0;
+            font-size: 12px;
+            color: #666666;
+        }
+        
+        div.finall div.zuo a.app {
+            font-size: 16px;
+            text-decoration: none;
+            width: 124px;
+            height: 40px;
+            color: #00a4ff;
+            border: 1px solid #00a4ff;
+            display: block;
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        div.finall div.you {
+            float: left;
+            margin-left: 150px;
+        }
+        
+        div.finall div.you dl dt {
+            margin-bottom: 15px;
+        }
+        
+        div.finall div.you dl {
+            float: left;
+            margin-left: 110px;
+        }
+        
+        div.finall div.you dl dt a {
+            text-decoration: none;
+        }
+        
+        div.finall div.you dl dt {
+            font-size: 16px;
+            color: 666;
+            text-decoration: none;
+        }
+        
+        div.finall div.you dl dd a {
+            text-decoration: none;
+            font-size: 12px;
+        }
+        /*  固定定位的设置  */
+        
+        div.a123 {
+            color: #ff7c2d;
+            width: 128px;
+            height: 128px;
+            position: fixed;
+            left: 50%;
+            margin-left: 607px;
+            top: 529px;
+        }
+        
+        div.a123 img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="a1">
+        <div class="logo2"><img src="images/logo2.png" alt="">
+
+        </div>
+        <div class="nav">
+            <ul>
+                <li class="l"><a href="">首页</a></li>
+                <li><a href="">课程</a></li>
+                <li><a href="">职业规划</a></li>
+            </ul>
+        </div>
+        <!--第一行的第一个以及第二个盒子-->
+        <div class="a2">
+
+            <input type="text" value=" 输入关键词">
+            <button></button>
+            <!--这里没有采用img插入图片，而采用CSS 进行url导入背景图片-->
+        </div>
+
+        <div class="a3"><img src="images/user.png" alt="">qq-1548433026</div>
+        <!--第一行的第三个盒子-->
+    </div>
+    <!--第一行结束了，第二行盒子开始了-->
+    <div class="b1">
+        <div class="banner">
+            <div class="subnav">
+                <ul>
+
+                    <li><a href="">前端开发<span>></span></a></li>
+                    <li><a href="">后端开发<span>></span></a></li>
+                    <li><a href="">移动开发<span>></span></a></li>
+                    <li><a href="">人工智能<span>></span></a>></li>
+                    <li><a href="">商业预测<span>></span></a></li>
+                    <li><a href="">云计算&大数据<span>></span></a></li>
+                    <li><a href="">运维&从测试<span>></span></a></li>
+                    <li><a href="">UI设计<span>></span></a></li>
+                    <li class="x"> <a href="">产品<span>></span></a>
+
+                    </li>
+                </ul>
+
+            </div>
+            <div class="course">
+                <h2>我的课程表</h2>
+                <div class="类">
+                    <ul>
+                        <li>Web前端开发</li>
+                        <li>Python后端开发</li>
+                        <li>剧本杀0基础学写作</li>
+                    </ul>
+                    <div class="more">
+                        <div class="more1"><a href="">全部课程</a></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--以上是head box and banner box next I well design a box of recommending-->
+    <!--首先我们将设计一个interesting box-->
+    <div class="interesting">
+        <h2><a href="">精品推荐</a></h2>
+        <ul>
+            <li>
+                <a href="#">jQuery</a>
+            </li>
+            <li>
+                <a href="#">Jave</a>
+            </li>
+            <li>
+                <a href="#">MySQL</a>
+            </li>
+            <li>
+                <a href="#">JaveWeb</a>
+            </li>
+            <li>
+                <a href="#">Python</a>
+            </li>
+            <li>
+                <a href="#">javesScript</a>
+            </li>
+        </ul>
+        <a href="" class="b1">修改兴趣</a>
+    </div>
+    <!--next I will design a box of td row-->
+    <div class="c">
+        <div class="hd">
+            <h3>精品推荐</h3>
+            <a href="">查看全部</a>
+        </div>
+        <ul class="h">
+            <li><img src="images/course01.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Think PHP 5.0 博客系统实战项目演练</h3>
+                <div class="into"><em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course02.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Android 网络图片加载框架详解</h3>
+                <div class="into"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course03.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Angular 2 最新框架+主流技术+项目实战</h3>
+                <div class="into"><em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course04.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>android Hybrid App开发实战</h3>
+                <div class="into"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course05.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3> UGUL 源码深度剖析</h3>
+                <div class="c5"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course06.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Kami2 首页界面切换效果</h3>
+                <div class="c5"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course07.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Unity Protiler 入门</h3>
+                <div class="c5"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course08.png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Cocos2d-x 引擎源码中的优化设计</h3>
+                <div class="into"> <em>高级</em> . 1125人正在学习</div>
+            </li>
+            <li><img src="images/course01 (1).png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Think PHP 5.0 博客系统实战项目演练</h3>
+                <div class="into"><em>高级</em>. 1125人正在学习</div>
+            </li>
+            <li><img src="images/course02 (1).png" alt=""><em><img src="images/hot.png" alt=""></em>
+                <h3>Android 网络图片加载框架详解</h3>
+                <div class="into"><em>高级</em> . 1125人正在学习</div>
+            </li>
+        </ul>
+    </div>
+
+    <!--这是精品推荐box部分-->
+    <!--下面将设计最后的尾部box-->
+    <div class="d">
+        <div class="d1">
+            <h3>编程入门</h3>
+            <a href="" class="d2">热门</a>
+            <a href="">初级</a>
+            <a href="">中级</a>
+            <a href="">高级</a>
+            <a href="" class="more">查看更多</a>
+        </div>
+        <!--下面开始在d2这个盒子里设置左右两个大盒子-->
+        <div class="d2">
+            <div class="zuo"><img src="images/data-pic.png" alt=""></div>
+            <!--左边盒子设计完毕-->
+            <div class="you">
+                <div class="shang"><img src="images/basic-banner.png" alt=""></div>
+                <!--右边的上面盒子设计完毕，下面开始设计下面的盒子-->
+                <div class="hou">
+                    <ul>
+                        <li>
+                            <a href=""><img src="images/course02 (2).png" alt=""></a>
+                            <h3>Android 网络图片加载框架详解</h3>
+                            <div class="zhong"><em>高级</em>. 1125人正在学习</div>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/course05 (1).png" alt=""></a>
+                            <h3>UGUL 源码深度剖析</h3>
+                            <div class="zhong"><em>高级</em>. 1125人正在学习</div>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/course04.png" alt=""></a>
+                            <h3>android Hybrid App开发实战</h3>
+                            <div class="zhong"><em>高级</em>. 1125人正在学习</div>
+                        </li>
+                        <li>
+                            <a href=""><img src="images/course03.png" alt=""></a>
+                            <h3>Angular 2 劲爆来袭</h3>
+                            <div class="zhong"><em>高级</em>. 1125人正在学习</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Now you can finally design the final model!  It is not easy!-->
+        <div class="finall">
+            <div class="zuo"><img src="images/logo (1).png" alt="">
+                <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。
+                    <br>© 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+                <a href="" class="app">下载app</a>
+            </div>
+            <!--下面开始最后部分的表单，你会发现这个表用dl去做最合适-->
+            <div class="you">
+                <dl>
+                    <dt> <a href="">关于学成网</a></dt>
+                    <dd>
+                        <a href="">关于</a></dd>
+                    <dd>
+                        <a href="">管理团队</a></dd>
+                    <dd>
+                        <a href="">工作机会</a></dd>
+                    <dd>
+                        <a href="">客户服务</a></dd>
+                    <dd>
+                        <a href="">帮助</a></dd>
+                </dl>
+                <dl>
+                    <dt> <a href="">关于学成网</a></dt>
+                    <dd>
+                        <a href="">关于</a></dd>
+                    <dd>
+                        <a href="">管理团队</a></dd>
+                    <dd>
+                        <a href="">工作机会</a></dd>
+                    <dd>
+                        <a href="">客户服务</a></dd>
+                    <dd>
+                        <a href="">帮助</a></dd>
+                </dl>
+                <dl>
+                    <dt> <a href="">关于学成网</a></dt>
+                    <dd>
+                        <a href="">关于</a></dd>
+                    <dd>
+                        <a href="">管理团队</a></dd>
+                    <dd>
+                        <a href="">工作机会</a></dd>
+                    <dd>
+                        <a href="">客户服务</a></dd>
+                    <dd>
+                        <a href="">帮助</a></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="a123"><img src="images/桌面.png" alt=""></div>
+</body>
+
+</html>

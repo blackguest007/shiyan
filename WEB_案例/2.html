@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+            width: 600px;
+            height: 200px;
+            margin: 100px auto;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .nav ul li {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.5s;
+            float: left;
+        }
+        
+        a {
+            width: 100%;
+            display: block;
+            float: left;
+            top: 0;
+            font-size: 24px;
+            left: 0;
+            height: 100%;
+            line-height: 200px;
+            text-decoration: none;
+            transition: all 1s;
+            color: aliceblue;
+        }
+        
+        .nav ul li a:first-child {
+            background-color: rgb(31, 236, 31);
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+        
+        .nav ul li a:last-child {
+            background-color: rgb(219, 216, 15);
+            position: absolute;
+            text-align: center;
+            transform: rotateX(90deg) translateZ(100px) scale3d(1, 1, 5);
+        }
+        
+        .nav ul li:hover {
+            transform: rotateX(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="">Index</a>
+                <a href="">首页</a>
+            </li>
+            <li>
+                <a href="">Register</a>
+                <a href="">注册</a>
+            </li>
+            <li>
+                <a href="">Login</a>
+                <a href="">登录</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

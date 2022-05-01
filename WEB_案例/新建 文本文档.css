@@ -1,0 +1,26 @@
+div.a1 {
+    width: 1268.8px;
+    height: 102px;
+    background-color: pink;
+    margin-top: 30px;
+}
+
+div.a2 {
+    width: 1200px;
+    height: 42px;
+    margin: 30px 34.2px;
+    background-color: rgb(197, 124, 29);
+}
+
+div.a3 {
+    width: 1268.8px;
+    height: 420px;
+    background-color: bisque;
+    margin: auto;
+}
+
+div.a4 {
+    height: 420px;
+    width: 1200px;
+    background-color: brown;
+}
